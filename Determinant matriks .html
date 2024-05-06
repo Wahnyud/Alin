@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>7. &#8212; My sample book</title>
+    <title>Determinant matriks &#8212; My sample book</title>
   
   
   
@@ -177,8 +177,9 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Tugas02Matriks.html">TUGASNYA</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="Tugas01sistem_linier.html">Tugas01sistem_linier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas02Matriks.html">Tugas02Matriks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas03Matriks_invers.html">Tugas 3</a></li>
 </ul>
 
     </div>
@@ -351,7 +352,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -362,11 +365,26 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>7.</h1>
+    <h1>Determinant matriks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Determinant matriks</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-dari-matrik-indentitas-yg-menghasilkan-1">#1. Determinan dari matrik indentitas yg menghasilkan 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mendefinisikan-sebuah-matriks-3x3-dengan-elemen-elemennya-matriks-ini-kemudian-disimpan-dalam-variabel-c-dan-d">#2. mendefinisikan sebuah matriks 3x3 dengan elemen-elemennya. Matriks ini kemudian disimpan dalam variabel c dan D</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">#3.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">7.</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -376,7 +394,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>#1. Determinan dari matrik indentitas yg menghasilkan 1</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="determinant-matriks">
+<h1>Determinant matriks<a class="headerlink" href="#determinant-matriks" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="determinan-dari-matrik-indentitas-yg-menghasilkan-1">
+<h1>#1. Determinan dari matrik indentitas yg menghasilkan 1<a class="headerlink" href="#determinan-dari-matrik-indentitas-yg-menghasilkan-1" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -406,7 +428,9 @@ determinan matrik identitas ordo 3x3 adalah: 1
 </div>
 </div>
 </div>
-<p>#2. mendefinisikan sebuah matriks 3x3 dengan elemen-elemennya. Matriks ini kemudian disimpan dalam variabel c dan D</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mendefinisikan-sebuah-matriks-3x3-dengan-elemen-elemennya-matriks-ini-kemudian-disimpan-dalam-variabel-c-dan-d">
+<h1>#2. mendefinisikan sebuah matriks 3x3 dengan elemen-elemennya. Matriks ini kemudian disimpan dalam variabel c dan D<a class="headerlink" href="#mendefinisikan-sebuah-matriks-3x3-dengan-elemen-elemennya-matriks-ini-kemudian-disimpan-dalam-variabel-c-dan-d" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -437,7 +461,9 @@ determinan matrik jika diubah letak barisnya adalah: 3
 </div>
 </div>
 </div>
-<p>#3.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>#3.<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -478,7 +504,7 @@ determinan matrik adalah: 24
 </div>
 </div>
 </div>
-<p>#4. jika terdpat matrik yg menghasilkan determinan “x”, dan membuat matrik baru dengan kelipatan”y”. maka jika “x” dikaikan “y” maka hasilnya determinan dr matrik baru tsb</p>
+<p>##4.jika terdpat matrik yg menghasilkan determinan “x”, dan membuat matrik baru dengan kelipatan”y”. maka jika “x” dikaikan “y” maka hasilnya determinan dr matrik baru tsb</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -507,7 +533,7 @@ determinan dari matrik H adalah: -20
 </div>
 </div>
 </div>
-<p>#5.</p>
+<p>##5.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -538,7 +564,7 @@ determinan dari matrik I adalah: -10
 </div>
 </div>
 </div>
-<p>#6. Det(A2)= det (B)+ det (A)
+<p>##6. Det(A2)= det (B)+ det (A)
 sehingga det  (a2)=(-5)+(-3)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -577,8 +603,8 @@ determinan dari matrik B adalah: -5
 </div>
 </div>
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>7.<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>7.<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -592,7 +618,10 @@ determinan dari matrik B adalah: -5
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 3 2]
  [0 2 2]
- [0 0 1]] 
+ [0 0 1]]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 
 determinan matrik adalah: 2
 </pre></div>
@@ -620,6 +649,7 @@ determinan matrik adalah: -25
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -659,7 +689,27 @@ determinan matrik adalah: -25
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Determinant matriks</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-dari-matrik-indentitas-yg-menghasilkan-1">#1. Determinan dari matrik indentitas yg menghasilkan 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mendefinisikan-sebuah-matriks-3x3-dengan-elemen-elemennya-matriks-ini-kemudian-disimpan-dalam-variabel-c-dan-d">#2. mendefinisikan sebuah matriks 3x3 dengan elemen-elemennya. Matriks ini kemudian disimpan dalam variabel c dan D</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">#3.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">7.</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to your Jupyter Book &#8212; My sample book</title>
+    <title>Tugas 3 &#8212; My sample book</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas03Matriks_invers';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas01sistem_linier" href="Tugas01sistem_linier.html" />
+    <link rel="prev" title="Tugas02Matriks" href="Tugas02Matriks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -142,7 +140,7 @@
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -173,16 +171,16 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to your Jupyter Book
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Tugas01sistem_linier.html">Tugas01sistem_linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas02Matriks.html">Tugas02Matriks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas03Matriks_invers.html">Tugas 3</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 3</a></li>
 </ul>
 
     </div>
@@ -254,7 +252,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas03Matriks_invers.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -284,7 +282,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Tugas03Matriks_invers.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +292,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -355,7 +353,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -366,11 +366,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to your Jupyter Book</h1>
+    <h1>Tugas 3</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-invers-matrik">1. pengertian invers matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-invers-matriks">2. Sifat invers matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-dengan-eliminasi-gaus-jordan">3. mencari invers dengan eliminasi gaus jordan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-sistem-persamaan-linear-dengan-matrik-inver">4. solusi sistem persamaan linear dengan matrik inver</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-soal-persamaan-linear-6-variabel">5. membuat soal persamaan linear 6 variabel</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -380,20 +392,121 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Link to this heading">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Tugas01sistem_linier.html">Tugas01sistem_linier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas02Matriks.html">Tugas02Matriks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas03Matriks_invers.html">Tugas 3</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-3">
+<h1>Tugas 3<a class="headerlink" href="#tugas-3" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Matrik Inves</p></li>
+<li><p>sifat-sifat matriks inves</p></li>
+<li><p>mencari invers dengan eliminasi gaus jordan</p></li>
+<li><p>solusi sistem persamaan linear dengan matrik inver</p></li>
+<li><p>membuat soal persamaan linear 6 variabel</p></li>
+</ol>
+<section id="pengertian-invers-matrik">
+<h2>1. pengertian invers matrik<a class="headerlink" href="#pengertian-invers-matrik" title="Link to this heading">#</a></h2>
+<p>Invers matriks adalah kebalikan (invers) dari sebuah matriks yang apabila matriks tersebut dikalikan dengan inversnya, akan menjadi matriks identitas. Invers matriks dilambangkan dengan A-1. Suatu matriks dikatakan memiliki invers jika determinan dari matriks tersebut tidak sama dengan nol</p>
+</section>
+<section id="sifat-invers-matriks">
+<h2>2. Sifat invers matriks<a class="headerlink" href="#sifat-invers-matriks" title="Link to this heading">#</a></h2>
+<p>adalah sifat yang berlaku untuk matriks yang merupakan kebalikan dari matriks asal. Invers matriks dapat ditulis dengan simbol A−1, yang berarti matriks yang jika dikalikan dengan matriks A, hasilnya adalah matriks identitas I. Matriks identitas adalah matriks yang memiliki angka 1 di diagonal utama dan angka 0 di luar diagonal utama.Beberapa sifat-sifat invers matriks adalah sebagai berikut:</p>
+<ol class="arabic simple">
+<li><p>Invers matriks hanya ada untuk matriks persegi, yaitu matriks yang memiliki jumlah baris dan kolom yang sama.</p></li>
+<li><p>Invers matriks hanya ada untuk matriks nonsingular, yaitu matriks yang memiliki determinan tidak sama dengan nol. Determinan adalah nilai yang dapat dihitung dari unsur-unsur suatu matriks persegi.</p></li>
+<li><p>Invers matriks adalah tunggal, yaitu tidak ada lebih dari satu matriks yang dapat menjadi invers dari suatu matriks. Jika B dan C keduanya adalah invers dari A, maka B=C.</p></li>
+<li><p>Invers dari invers suatu matriks adalah matriks itu sendiri. Jika B adalah invers dari A, maka invers dari B adalah A. Dapat ditulis (A^−1)^−1 = A.</p></li>
+<li><p>Invers dari hasil kali dua atau lebih matriks adalah hasil kali invers-inversnya dalam urutan terbalik. Jika A dan B keduanya nonsingular, maka (AB)^−1 = B^−1 A^−1.</p></li>
+<li><p>Invers dari transpos suatu matriks adalah transpos dari inversnya. Transpos adalah operasi menukar baris dan kolom suatu matriks. Jika A nonsingular, maka (A^T)^−1 = (A^−1)^T.</p></li>
+</ol>
+</section>
+<section id="mencari-invers-dengan-eliminasi-gaus-jordan">
+<h2>3. mencari invers dengan eliminasi gaus jordan<a class="headerlink" href="#mencari-invers-dengan-eliminasi-gaus-jordan" title="Link to this heading">#</a></h2>
+<p>Untuk mencari invers dari sebuah matriks menggunakan metode eliminasi Gauss-Jordan, langkah-langkahnya adalah sebagai berikut:</p>
+<p>Misalkan kita memiliki matriks
+A yang ingin kita inverskan dengan ukuran n×n. Langkah-langkahnya adalah sebagai berikut:</p>
+<ol class="arabic simple">
+<li><p>Gabungkan matriks A dengan matriks identitas I , dengan ukuran yang sama.Ini akan menjadi matriks gabungan [A∣I].</p></li>
+<li><p>Gunakan operasi baris elementer (OBE) untuk mentransformasikan matriks A menjadi matriks identitas I. Ini dilakukan dengan cara membuat elemen diagonal utama dari matriks A menjadi 1 dan membuat semua elemen di atas dan di bawahnya menjadi 0.</p></li>
+<li><p>Setelah matriks A menjadi matriks identitas, matriks yang berada di sebelah kanan I akan menjadi invers dari matriks A</p></li>
+</ol>
+</section>
+<section id="solusi-sistem-persamaan-linear-dengan-matrik-inver">
+<h2>4. solusi sistem persamaan linear dengan matrik inver<a class="headerlink" href="#solusi-sistem-persamaan-linear-dengan-matrik-inver" title="Link to this heading">#</a></h2>
+<p>Untuk menyelesaikan sistem persamaan linear menggunakan matriks invers, kita bisa menggunakan hubungan:</p>
+<ol class="arabic simple">
+<li><p>X=A −1B</p></li>
+</ol>
+<p>Di mana:</p>
+<ul class="simple">
+<li><p>A adalah matriks koefisien dari sistem persamaan linear.</p></li>
+<li><p>B adalah matriks kolom dari konstanta pada sisi kanan sistem persamaan linear.</p></li>
+<li><p>X adalah matriks kolom dari variabel yang kita cari.
+Langkah-langkahnya adalah sebagai berikut:</p>
+<ol class="arabic simple">
+<li><p>Hitung invers dari matriks koefisien A inv, yaitu A−1</p></li>
+<li><p>Kalikan 1 A inv −1 dengan matriks kolom B untuk mendapatkan matriks kolom X,</p></li>
+<li><p>Matriks kolom X akan berisi solusi untuk sistem persamaan linear. Berikut ini adalah algoritma umum dalam pseudocode:</p></li>
+</ol>
+</li>
 </ul>
+</section>
+<section id="membuat-soal-persamaan-linear-6-variabel">
+<h2>5. membuat soal persamaan linear 6 variabel<a class="headerlink" href="#membuat-soal-persamaan-linear-6-variabel" title="Link to this heading">#</a></h2>
+<p>Solusi dari sistem persamaan tersebut adalah:
+x = 1, y = 2, z = 3, w = 4, u = 5, v = 6</p>
+<ul class="simple">
+<li><p>Sistem persamaan ini dapat diselesaikan dengan metode eliminasi atau substitusi. Pertama, kita perlu mengatur persamaan tersebut dalam bentuk matriks. Kemudian, kita dapat menggunakan metode eliminasi untuk mengurangi jumlah variabel dalam setiap persamaan. Setelah itu, kita dapat menyelesaikan persamaan yang tersisa untuk menemukan nilai dari setiap variabel. Dalam hal ini, solusi dari sistem persamaan tersebut adalah x = 1, y = 2, z = 3, w = 4, u = 5, v = 6.</p></li>
+<li><p>Untuk menyelesaikan sistem persamaan linear dengan 6 variabel seperti yang diberikan, langkah-langkahnya adalah sebagai berikut:</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Ubah sistem persamaan ke dalam bentuk matriks augmented:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 2 &amp; 3 &amp; -4 &amp; 5 &amp; 6 &amp; -7 &amp; | &amp; 10 \\ 3 &amp; -5 &amp; 4 &amp; -5 &amp; 6 &amp; 7 &amp; | &amp; 30 \\ 5 &amp; -5 &amp; 4 &amp; -5 &amp; -6 &amp; 7 &amp; | &amp; 30 \\ 6 &amp; 0 &amp; 3 &amp; 2 &amp; -7 &amp; 6 &amp; | &amp; 40 \\ 6 &amp; 6 &amp; 5 &amp; 4 &amp; 3 &amp; 2 &amp; | &amp; 50 \end{bmatrix}\)</span></p>
+<ol class="arabic simple" start="2">
+<li><p>Gunakan operasi baris elementer untuk menyederhanakan matriks menjadi bentuk eselon tereduksi.</p></li>
+<li><p>Setelah matriks dalam bentuk eselon tereduksi, kita dapat menentukan nilai variabel dengan mengubah matriks tersebut kembali menjadi sistem persamaan.</p></li>
+<li><p>Dengan menggantikan nilai variabel yang ditemukan ke dalam sistem persamaan asli, kita dapat memverifikasi solusi yang ditemukan.</p></li>
+</ol>
+<p>Dengan mengikuti langkah-langkah di atas, kita dapat menemukan solusi dari sistem persamaan linear dengan 6 variabel yang diberikan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">inv_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">inv_B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invers dari matriks A:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inv_A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Invers dari matriks B:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inv_B</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil perkalian invers A dengan B:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Invers dari matriks A:
+[[-0.14285714  0.42857143]
+ [ 0.42857143 -0.28571429]]
+
+Invers dari matriks B:
+[[1. 0.]
+ [0. 1.]]
+
+Hasil perkalian invers A dengan B:
+[[2 3]
+ [3 1]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -426,14 +539,14 @@ It does not go in-depth into any particular topic - check out <a class="referenc
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="Tugas01sistem_linier.html"
-       title="next page">
+    <a class="left-prev"
+       href="Tugas02Matriks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas01sistem_linier</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tugas02Matriks</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -442,7 +555,24 @@ It does not go in-depth into any particular topic - check out <a class="referenc
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-invers-matrik">1. pengertian invers matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-invers-matriks">2. Sifat invers matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-dengan-eliminasi-gaus-jordan">3. mencari invers dengan eliminasi gaus jordan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-sistem-persamaan-linear-dengan-matrik-inver">4. solusi sistem persamaan linear dengan matrik inver</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-soal-persamaan-linear-6-variabel">5. membuat soal persamaan linear 6 variabel</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
