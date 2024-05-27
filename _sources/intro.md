@@ -1,11 +1,9 @@
-# Welcome to your Jupyter Book
+# Welcome to WAHYUDI Jupyter Book
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Ini adalah contoh buku kecil untuk memberi Anda gambaran tentang isi buku tersusun.
+Ini menunjukkan beberapa jenis file utama, serta beberapa contoh konten.
+Panduan ini tidak membahas topik tertentu secara mendalam - lihat [dokumentasi Buku Jupyter](https://jupyterbook.org) untuk informasi lebih lanjut.
 
-Check out the content pages bundled with this sample book to see more.
-
+Periksa halaman konten yang disertakan dengan buku contoh ini untuk mengetahui lebih lanjut.
 ```{tableofcontents}
 ```
